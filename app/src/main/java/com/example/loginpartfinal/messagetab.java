@@ -15,6 +15,7 @@ public class messagetab extends AppCompatActivity {
     ImageView backrtohmpge;
     ImageView profilemsg;
     TextView profilename1;
+    String userType;
 
 
     @SuppressLint("MissingInflatedId")
@@ -22,13 +23,25 @@ public class messagetab extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_messagetab);
+
+        userType = getIntent().getStringExtra("userType");
+
+        if (userType != null && userType.equals("Giver")) {
+            setContentView(R.layout.activity_messagetab);
+        } else {
+            setContentView(R.layout.activity_messagetab);
+        }
 
         backrtohmpge = findViewById(R.id.backtohmpge);
 
         backrtohmpge.setOnClickListener(v -> {
-            Intent intent = new Intent(messagetab.this, homepage.class);
-            startActivity(intent);
+            if (userType != null && userType.equals("Giver")) {
+                Intent intent = new Intent(messagetab.this, homepagegiver.class);
+                startActivity(intent);
+            } else {
+                Intent intent = new Intent(messagetab.this, homepagetaker.class);
+                startActivity(intent);
+            }
         });
 
         profilemsg = findViewById(R.id.profilemsg);

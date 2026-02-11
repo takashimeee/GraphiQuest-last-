@@ -10,11 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 public class homepagegiver extends AppCompatActivity implements View.OnClickListener {
 
     ImageView homebutton, leaderboardbutton, searchbutton, taskboardbutton, profilebutton, taskbutton, msgbtn;
+    String userType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepagegiver);
+
+        userType = getIntent().getStringExtra("userType");
 
         homebutton = findViewById(R.id.homebutton);
         leaderboardbutton = findViewById(R.id.leaderboardbutton);
@@ -38,26 +41,25 @@ public class homepagegiver extends AppCompatActivity implements View.OnClickList
         int id = v.getId();
         Intent intent;
 
-
         if (id == R.id.postbtn) {
             intent = new Intent(this, upload.class);
             startActivity(intent);
         } else if (id == R.id.msgbtn || id == R.id.mainmessagetab) {
             intent = new Intent(this, messagetab.class);
+            intent.putExtra("userType", userType);
             startActivity(intent);
-            if (id == R.id.searchbutton) {
-                intent = new Intent(this, giversearchbar1.class);
-                startActivity(intent);
-            } else if (id == R.id.homebutton || id == R.id.leaderboardbutton) {
-                intent = new Intent(this, LeaderboardMain.class);
-                startActivity(intent);
-            } else if (id == R.id.pendingboardbutton) {
-                intent = new Intent(this, pendingtask.class);
-                startActivity(intent);
-            } else if (id == R.id.profilebutton) {
-                intent = new Intent(this, userprofile.class);
-                startActivity(intent);
-            }
+        } else if (id == R.id.searchbutton) {
+            intent = new Intent(this, giversearchbar1.class);
+            startActivity(intent);
+        } else if (id == R.id.homebutton || id == R.id.leaderboardbutton) {
+            intent = new Intent(this, LeaderboardMain.class);
+            startActivity(intent);
+        } else if (id == R.id.pendingboardbutton) {
+            intent = new Intent(this, pendingtask.class);
+            startActivity(intent);
+        } else if (id == R.id.profilebutton) {
+            intent = new Intent(this, userprofile.class);
+            startActivity(intent);
         }
     }
 }

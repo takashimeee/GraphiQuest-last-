@@ -18,7 +18,7 @@ public class takersearchbar3 extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_takersearchbar3);
 
         btnback = findViewById(R.id.btnback);
-        btnsendreq = findViewById(R.id.btnApply);
+        btnsendreq = findViewById(R.id.btnsendreq);
 
         btnback.setOnClickListener(this);
         btnsendreq.setOnClickListener(this);
@@ -29,11 +29,11 @@ public class takersearchbar3 extends AppCompatActivity implements View.OnClickLi
         int id = v.getId();
         Intent intent;
 
-        if (id == R.id.btnApply) {
+        if (id == R.id.btnsendreq) {
             intent = new Intent(this, Request.class);
             startActivity(intent);
         } else if (id == R.id.btnback) {
-            intent = new Intent(this, homepagetaker.class);
+            intent = new Intent(this, takersearchbar2.class);
             startActivity(intent);
         }
     }

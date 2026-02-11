@@ -1,9 +1,11 @@
 package com.example.loginpartfinal;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -14,11 +16,11 @@ import androidx.appcompat.app.AppCompatActivity;
 public class CreateAccountActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btnBack, btnSignup;
+    EditText etEmail, etPassword;
     RadioButton giverAcc, takerAcc;
     RadioGroup radiogroupacc;
 
     String userType;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,8 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
         radiogroupacc = findViewById(R.id.radiogroupacc);
         giverAcc = findViewById(R.id.GiverAcc);
         takerAcc = findViewById(R.id.TakerAcc);
+        etEmail = findViewById(R.id.etEmail);
+        etPassword = findViewById(R.id.etPassword);
 
         btnSignup.setOnClickListener(this);
 
@@ -60,9 +64,18 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
         int id = v.getId();
 
         if (id == R.id.btnSignup){
-            if (userType == null) {
-                Toast.makeText(this, "Please select a role", Toast.LENGTH_SHORT).show();
+            String mobile = etEmail.getText().toString();
+            String password = etPassword.getText().toString();
+
+            if (mobile.isEmpty() || password.isEmpty() || userType == null) {
+                Toast.makeText(this, "Please fill all fields and select a role", Toast.LENGTH_SHORT).show();
             } else {
+                SharedPreferences preferences = getSharedPreferences("user_credentials", MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("mobile", mobile);
+                editor.putString("password", password);
+                editor.apply();
+
                 intent = new Intent(this, AfterLoginActivity.class);
                 intent.putExtra("userType", userType);
                 startActivity(intent);

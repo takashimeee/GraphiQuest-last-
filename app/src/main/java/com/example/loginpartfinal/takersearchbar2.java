@@ -4,10 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class takersearchbar2 extends AppCompatActivity implements View.OnClickListener {
 
+    ImageView homebutton, leaderboardbutton, searchbutton, taskboardbutton, profilebutton, msgbtn, backarrow;
     Button btnkendrick, btnbaxia, btnMark, btnbeast;
 
     @Override
@@ -15,11 +18,24 @@ public class takersearchbar2 extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_takersearchbar2);
 
+        homebutton = findViewById(R.id.homebutton);
+        leaderboardbutton = findViewById(R.id.leaderboardbutton);
+        searchbutton = findViewById(R.id.searchbutton);
+        taskboardbutton = findViewById(R.id.taskboardbutton);
+        profilebutton = findViewById(R.id.profilebutton);
+        msgbtn = findViewById(R.id.msgbtn);
+        backarrow = findViewById(R.id.btnback);
         btnkendrick = findViewById(R.id.btnkendrick);
         btnbaxia = findViewById(R.id.btnbaxia);
         btnMark = findViewById(R.id.btnMark);
         btnbeast = findViewById(R.id.btnbeast);
-
+        homebutton.setOnClickListener(this);
+        leaderboardbutton.setOnClickListener(this);
+        searchbutton.setOnClickListener(this);
+        taskboardbutton.setOnClickListener(this);
+        profilebutton.setOnClickListener(this);
+        msgbtn.setOnClickListener(this);
+        backarrow.setOnClickListener(this);
         btnkendrick.setOnClickListener(this);
         btnbaxia.setOnClickListener(this);
         btnMark.setOnClickListener(this);
@@ -31,11 +47,29 @@ public class takersearchbar2 extends AppCompatActivity implements View.OnClickLi
         int id = v.getId();
         Intent intent;
 
+
+
         if (id == R.id.btnkendrick) {
             intent = new Intent(this, takersearchbar3.class);
             startActivity(intent);
-        } else if (id == R.id.btnbaxia || id == R.id.btnMark || id == R.id.btnbeast) {
-            // Handle clicks for other buttons if needed
+        } else if (id == R.id.searchbutton) {
+            intent = new Intent(this, takersearchbar1.class);
+            startActivity(intent);
+            } else if (id == R.id.btnback) {
+                intent = new Intent(this, takersearchbar1.class);
+                startActivity(intent);
+        } else if (id == R.id.homebutton || id == R.id.leaderboardbutton) {
+            intent = new Intent(this, LeaderboardFullList.class);
+            startActivity(intent);
+        } else if (id == R.id.taskboardbutton) {
+            intent = new Intent(this, pendingtask.class);
+            startActivity(intent);
+        } else if (id == R.id.profilebutton) {
+            intent = new Intent(this, userprofile.class);
+            startActivity(intent);
+        } else if (id == R.id.msgbtn) {
+            intent = new Intent(this, messagetab.class);
+            startActivity(intent);
         }
     }
 }

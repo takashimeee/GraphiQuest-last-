@@ -29,6 +29,7 @@ public class TermsActivity extends AppCompatActivity {
                 } else {
                     newIntent = new Intent(TermsActivity.this, homepagetaker.class);
                 }
+                newIntent.putExtra("userType", userType);
                 Toast.makeText(this, "Thank you for agreeing!", Toast.LENGTH_SHORT).show();
                 startActivity(newIntent);
             }

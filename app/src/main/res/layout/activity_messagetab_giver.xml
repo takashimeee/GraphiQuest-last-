@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainmessagetab"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".messagetab">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#66A3FF">
+
+        <ImageView
+            android:id="@+id/backtohmpge"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/backarrow"
+            android:clickable="true"
+            android:focusable="true"/>
+
+<!--        end of back arrow-->
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to ChatBoard! (Giver)"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppinsblack"
+        android:layout_gravity="center_horizontal"/>
+
+
+    <FrameLayout
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/curvemtb">
+
+            <FrameLayout
+                android:layout_width="315dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:background="@drawable/curvemtb2"
+                android:clickable="true"
+                android:focusable="true">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profilemsg"
+                    android:src="@drawable/profilemsgtab"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="100dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profilename1"
+                    android:text="Lebron James"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppinsblack"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="On a Quest!"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="58dp"
+                    android:layout_marginRight="12dp"
+                    android:fontFamily="@font/poppins_extrabold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="'Hello QuestTaker! my progress...'"
+                    android:textColor="@color/black"
+                    android:textSize="10dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/poppinslight"/>
+                    </FrameLayout>
+<!--        end of charlie kirkie tab-->
+
+        </FrameLayout>
+
+
+
+    <FrameLayout
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/curvemtb">
+
+        <FrameLayout
+            android:layout_width="315dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:background="@drawable/curvemtb2"
+            android:clickable="true"
+            android:focusable="true">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/profilemsg2"
+                android:src="@drawable/profilemsgtab"
+                android:layout_gravity="center"
+                android:layout_marginRight="100dp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Noah Kirk"
+                android:textSize="20dp"
+                android.textColor="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinsblack"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resting!"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="58dp"
+                android:layout_marginRight="24dp"
+                android:fontFamily="@font/poppins_extrabold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/poppinslight"
+                android:text="'Thank you QustGiver!'"
+                android:textSize="10dp" />
+        </FrameLayout>
+        <!--        end of noah knigga tab-->
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/curvemtb">
+
+        <FrameLayout
+            android:layout_width="315dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:background="@drawable/curvemtb2"
+            android:clickable="true"
+            android:focusable="true">
+
+
+            <ImageView
+                android:id="@+id/profilemsg3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="100dp"
+                android:src="@drawable/profilemsgtab"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinsblack"
+                android:text="Jeffrey Mapagmahal"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="58dp"
+                android:layout_marginRight="12dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_extrabold"
+                android:text="On a Quest!"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/poppinslight"
+                android:text="'Hello QuestTaker! my progress...'"
+                android:textSize="10dp" />
+        </FrameLayout>
+        <!--        end of jeffrey eipstein tab-->
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/menutab"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#D9D9D9"
+        android:layout_marginTop="140dp">
+
+        <ImageView
+            android:id="@+id/homebutton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/homebutton"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/leaderboardbutton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/trophybutton"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="105dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/searchbutton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/searchbutton"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="190dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/taskboardbutton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/taskboardbutton"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="275dp"/>
+
+        <ImageView
+            android:id="@+id/profilebutton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/profilebutton"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="360dp"
+            android:clickable="true"
+            android:focusable="true"/>
+    </FrameLayout>
+
+<!--    end of main menu tab-->
+
+
+</LinearLayout>
+

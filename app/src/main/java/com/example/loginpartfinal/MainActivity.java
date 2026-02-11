@@ -1,6 +1,7 @@
 package com.example.loginpartfinal;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,9 +28,19 @@ public class MainActivity extends AppCompatActivity {
         tvForgotPassword = findViewById(R.id.tvForgotPassword);
 
         btnLogin.setOnClickListener(v -> {
-            // Changed this to go to AfterLoginActivity as requested
-            Intent intent = new Intent(MainActivity.this, homepage.class);
-            startActivity(intent);
+            String mobile = etEmail.getText().toString();
+            String password = etPassword.getText().toString();
+
+            SharedPreferences preferences = getSharedPreferences("user_credentials", MODE_PRIVATE);
+            String savedMobile = preferences.getString("mobile", "");
+            String savedPassword = preferences.getString("password", "");
+
+            if (mobile.equals(savedMobile) && password.equals(savedPassword)) {
+                Intent intent = new Intent(MainActivity.this, homepage.class);
+                startActivity(intent);
+            } else {
+                Toast.makeText(this, "Invalid mobile number or password", Toast.LENGTH_SHORT).show();
+            }
         });
 
         btnCreate.setOnClickListener(v -> {
