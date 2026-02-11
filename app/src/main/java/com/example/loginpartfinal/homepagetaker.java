@@ -47,7 +47,7 @@ public class homepagetaker extends AppCompatActivity implements View.OnClickList
             intent = new Intent(this, LeaderboardMain.class);
             startActivity(intent);
         } else if (id == R.id.taskboardbutton) {
-            intent = new Intent(this, taskbar1.class);
+            intent = new Intent(this, pendingtask.class);
             startActivity(intent);
         } else if (id == R.id.profilebutton) {
             intent = new Intent(this, userprofile.class);

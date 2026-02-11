@@ -35,7 +35,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="We want to you acknowledge that this app is still in development and is not fully complete. Every data that you give will be safe in our hands and this project is only for school purposes and we hope you can give as much feedback as you can to aid in the development of our small project."
+            android:text="We want to you acknowledge that this app is still in its early publish and only in Beta. Every data that you give inside the application will be safe in our hands and this project will be enchance for future purposes and we hope you can give as much feedback as you can to aid in this small project ours."
             android:textSize="14sp"
             android:textStyle="bold"
             android:fontFamily="@font/poppinslight"

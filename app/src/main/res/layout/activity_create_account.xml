@@ -80,7 +80,8 @@
                 android:fontFamily="@font/poppinslight"
                 android:gravity="center"
                 android:hint="mm"
-                android:inputType="number" />
+                android:inputType="number"
+                android:maxLength="2" />
 
             <EditText
                 android:id="@+id/etDD"
@@ -93,7 +94,8 @@
                 android:fontFamily="@font/poppinslight"
                 android:gravity="center"
                 android:hint="dd"
-                android:inputType="number" />
+                android:inputType="number"
+                android:maxLength="2" />
 
             <EditText
                 android:id="@+id/etYY"
@@ -105,7 +107,8 @@
                 android:fontFamily="@font/poppinslight"
                 android:gravity="center"
                 android:hint="yy"
-                android:inputType="number" />
+                android:inputType="number"
+                android:maxLength="4" />
         </LinearLayout>
 
         <TextView
