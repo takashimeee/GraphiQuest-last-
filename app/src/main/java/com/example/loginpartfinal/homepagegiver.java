@@ -17,8 +17,6 @@ public class homepagegiver extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepagegiver);
 
-        userType = getIntent().getStringExtra("userType");
-
         homebutton = findViewById(R.id.homebutton);
         leaderboardbutton = findViewById(R.id.leaderboardbutton);
         searchbutton = findViewById(R.id.searchbutton);

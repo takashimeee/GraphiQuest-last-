@@ -40,7 +40,7 @@ public class homepage extends AppCompatActivity {
 //        homepage to leaderboardbutton
 
         searchbutton.setOnClickListener(v -> {
-            Intent intent = new Intent(homepage.this, searchbar1.class);
+            Intent intent = new Intent(homepage.this, takersearchbar1.class);
             startActivity(intent);
         });
 //        homepage to search

@@ -48,18 +48,20 @@ public class takersearchbar2 extends AppCompatActivity implements View.OnClickLi
         Intent intent;
 
 
-
         if (id == R.id.btnkendrick) {
             intent = new Intent(this, takersearchbar3.class);
+            startActivity(intent);
+        } else if (id == R.id.btnback) {
+            intent = new Intent(this, takersearchbar1.class);
             startActivity(intent);
         } else if (id == R.id.searchbutton) {
             intent = new Intent(this, takersearchbar1.class);
             startActivity(intent);
-            } else if (id == R.id.btnback) {
-                intent = new Intent(this, takersearchbar1.class);
-                startActivity(intent);
-        } else if (id == R.id.homebutton || id == R.id.leaderboardbutton) {
-            intent = new Intent(this, LeaderboardFullList.class);
+        } else if (id == R.id.homebutton) {
+            intent = new Intent(this, homepagetaker.class);
+            startActivity(intent);
+        } else if (id == R.id.leaderboardbutton) {
+            intent = new Intent(this, LeaderboardMain.class);
             startActivity(intent);
         } else if (id == R.id.taskboardbutton) {
             intent = new Intent(this, pendingtask.class);

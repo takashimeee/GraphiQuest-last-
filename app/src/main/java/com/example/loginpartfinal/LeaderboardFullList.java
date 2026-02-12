@@ -11,10 +11,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class LeaderboardFullList extends AppCompatActivity implements View.OnClickListener {
+public class LeaderboardFullList extends AppCompatActivity implements View.OnClickListener{
 
     ImageView backBtn, homeBtn, leaderboardBtn, searchBtn, taskBtn, profileBtn, showMoreIV;
-
+    String leaderboardType;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +41,10 @@ public class LeaderboardFullList extends AppCompatActivity implements View.OnCli
         taskBtn.setOnClickListener(this);
         profileBtn.setOnClickListener(this);
         showMoreIV.setOnClickListener(this);
+
+
     }
+
     public void onClick (View v){
         Intent intent;
         int id = v.getId();
@@ -49,27 +52,24 @@ public class LeaderboardFullList extends AppCompatActivity implements View.OnCli
         if (id == R.id.backBtn) {
             intent = new Intent(this, LeaderboardPodiumActivity.class);
             startActivity(intent);
-        } else if (id == R.id.homebutton){
-              /* open home change mainPage.class to home page of the app
-            intent = new Intent(this, mainPage.class);
-            startActivity(intent);*/
-        } else if (id == R.id.leaderboardbutton){
-            //does nothing youre here already
-        } else if (id == R.id.searchbutton){
-            /* This opens the search page change searchPage.class to search page of the app
-            intent = new intent(this, searchPage.class);
+        } else if (id == R.id.homebutton) {
+            intent = new Intent(this, homepage.class);
             startActivity(intent);
-             */
-        } else if (id == R.id.taskboardbutton){
-            /* This opens the task page change taskPage.class to task page of the app
-            intent = new intent(this, taskPage.class);
+        } else if (id == R.id.leaderboardbutton) {
+            intent = new Intent(this, LeaderboardFullList.class);
             startActivity(intent);
-             */
-        } else if (id == R.id.profilebutton){
-            /* This opens profile page change profilePage.class to profile page of the app
-            intent = new intent (this, profilePage.class);
+        } else if (id == R.id.searchbutton) {
+            intent = new Intent(this, takersearchbar1.class);
             startActivity(intent);
-             */
+        } else if (id == R.id.taskboardbutton) {
+            intent = new Intent(this, taskbar1.class);
+            startActivity(intent);
+        } else if (id == R.id.profilebutton) {
+            intent = new Intent(this, userprofile.class);
+            startActivity(intent);
+        } else if (id == R.id.msgbtn) {
+            intent = new Intent(this, messagetab.class);
+            startActivity(intent);
         }
     }
 }

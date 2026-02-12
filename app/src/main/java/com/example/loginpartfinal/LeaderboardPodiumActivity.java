@@ -92,27 +92,21 @@ public class LeaderboardPodiumActivity extends AppCompatActivity implements View
         if (id == R.id.backBtn) {
             intent = new Intent(this, LeaderboardMain.class);
             startActivity(intent);
-        } else if (id == R.id.homebutton){
-              /* open home change mainPage.class to home page of the app
-            intent = new Intent(this, mainPage.class);
-            startActivity(intent);*/
-        } else if (id == R.id.leaderboardbutton){
-            //does nothing youre here already
-        } else if (id == R.id.searchbutton){
-            /* This opens the search page change searchPage.class to search page of the app
-            intent = new intent(this, searchPage.class);
+        } else if (id == R.id.homebutton) {
+            intent = new Intent(this, homepagegiver.class);
             startActivity(intent);
-             */
-        } else if (id == R.id.taskboardbutton){
-            /* This opens the task page change taskPage.class to task page of the app
-            intent = new intent(this, taskPage.class);
+        } else if (id == R.id.leaderboardbutton) {
+            intent = new Intent(this, LeaderboardFullList.class);
             startActivity(intent);
-             */
-        } else if (id == R.id.profilebutton){
-            /* This opens profile page change profilePage.class to profile page of the app
-            intent = new intent (this, profilePage.class);
+        } else if (id == R.id.taskboardbutton) {
+            intent = new Intent(this, pendingtask.class);
             startActivity(intent);
-             */
+        } else if (id == R.id.profilebutton) {
+            intent = new Intent(this, userprofile.class);
+            startActivity(intent);
+        } else if (id == R.id.msgbtn) {
+            intent = new Intent(this, messagetab.class);
+            startActivity(intent);
         }
-    }
+        }
 }

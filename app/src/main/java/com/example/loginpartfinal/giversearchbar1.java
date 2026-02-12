@@ -53,7 +53,10 @@ public class giversearchbar1 extends AppCompatActivity implements View.OnClickLi
             startActivity(intent);
         } else if (id == R.id.searchbutton) {
             // Do nothing, already on this screen
-        } else if (id == R.id.homebutton || id == R.id.leaderboardbutton) {
+        } else if (id == R.id.homebutton) {
+            intent = new Intent(this, homepagegiver.class);
+            startActivity(intent);
+        } else if (id == R.id.leaderboardbutton) {
             intent = new Intent(this, LeaderboardFullList.class);
             startActivity(intent);
         } else if (id == R.id.taskboardbutton) {

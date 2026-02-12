@@ -21,7 +21,6 @@ public class homepagetaker extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepagetaker);
 
-        userType = getIntent().getStringExtra("userType");
         creattitle = findViewById(R.id.creattitle);
         boxbox = findViewById(R.id.boxbox);
         chattab = findViewById(R.id.msgbtn);
@@ -30,12 +29,17 @@ public class homepagetaker extends AppCompatActivity implements View.OnClickList
         leaderboardButton = findViewById(R.id.leaderboardbutton);
         taskboardbutton = findViewById(R.id.taskboardbutton);
         profilebutton = findViewById(R.id.profilebutton);
+        descriptiontext = findViewById(R.id.descriptiontext);
+
+        creattitle.setOnClickListener(this);
+        boxbox.setOnClickListener(this);
         searchButton.setOnClickListener(this);
         homeButton.setOnClickListener(this);
         leaderboardButton.setOnClickListener(this);
         taskboardbutton.setOnClickListener(this);
         profilebutton.setOnClickListener(this);
         chattab.setOnClickListener(this);
+        descriptiontext.setOnClickListener(this);
 
 
     }
@@ -45,32 +49,27 @@ public class homepagetaker extends AppCompatActivity implements View.OnClickList
         int id = v.getId();
         Intent intent;
 
-        if (id == R.id.boxbox) {
+        if (id == R.id.boxbox || id == R.id.creattitle || id == R.id.descriptiontext) {
             intent = new Intent(this, apply.class);
             startActivity(intent);
-
-            if (id == R.id.creattitle) {
-                intent = new Intent(this, apply.class);
-                startActivity(intent);
-
-                if (id == R.id.searchbutton) {
-                    intent = new Intent(this, takersearchbar1.class);
-                    startActivity(intent);
-                } else if (id == R.id.homebutton || id == R.id.leaderboardbutton) {
-                    intent = new Intent(this, LeaderboardMain.class);
-                    startActivity(intent);
-                } else if (id == R.id.taskboardbutton) {
-                    intent = new Intent(this, pendingtask.class);
-                    startActivity(intent);
-                } else if (id == R.id.profilebutton) {
-                    intent = new Intent(this, userprofile.class);
-                    startActivity(intent);
-                } else if (id == R.id.msgbtn) {
-                    intent = new Intent(this, messagetab.class);
-                    intent.putExtra("userType", userType);
-                    startActivity(intent);
-                }
-            }
+        } else if (id == R.id.searchbutton) {
+            intent = new Intent(this, takersearchbar1.class);
+            startActivity(intent);
+        } else if (id == R.id.homebutton) {
+            intent = new Intent(this, homepagetaker.class);
+            startActivity(intent);
+        } else if (id == R.id.leaderboardbutton) {
+            intent = new Intent(this, LeaderboardMain.class);
+            startActivity(intent);
+        } else if (id == R.id.taskboardbutton) {
+            intent = new Intent(this, taskbar1.class);
+            startActivity(intent);
+        } else if (id == R.id.profilebutton) {
+            intent = new Intent(this, userprofile.class);
+            startActivity(intent);
+        } else if (id == R.id.msgbtn) {
+            intent = new Intent(this, messagetab.class);
+            startActivity(intent);
         }
     }
 }

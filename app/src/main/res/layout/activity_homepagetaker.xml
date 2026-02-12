@@ -41,20 +41,20 @@
         android:layout_marginTop="150dp">
 
         <FrameLayout
+            android:id="@+id/taskframe2"
             android:layout_width="288dp"
             android:layout_height="170dp"
-            android:id="@+id/taskframe2"
-            android:background="@drawable/curve4hpg"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:background="@drawable/curve4hpg">
 
             <TextView
                 android:id="@+id/creattitle"
-                android:clickable="true"
-                android:focusable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
                 android:fontFamily="@font/poppinsblack"
                 android:text="Create a 3D Box"
                 android:textColor="@color/black"
@@ -67,11 +67,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
-            android:textColor="@color/black"
             android:clickable="true"
             android:focusable="true"
             android:fontFamily="@font/poppinslight"
             android:text="Click me for more description"
+            android:textColor="@color/black"
             android:textSize="10dp"
             android:textStyle="bold" />
 

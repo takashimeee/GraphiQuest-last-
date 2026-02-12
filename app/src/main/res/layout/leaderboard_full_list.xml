@@ -1,344 +1,344 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LeaderboardFullList"
-    android:orientation="vertical"
     android:background="@drawable/background">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="51dp">
+        android:layout_height="match_parent"
+        android:layout_above="@id/menutab">
 
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="35dp"
-            android:src="@drawable/grapquest" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/backBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/logo"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/arrow_left" /> <!-- back button-->
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="35dp"
+                android:src="@drawable/grapquest" />
 
-        <ImageView
-            android:id="@+id/showMoreIV"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_below="@id/backBtn"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="47dp"
-            android:background="@drawable/showmorelb" />
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logo"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/arrow_left" /> <!-- back button-->
 
-        <LinearLayout
-            android:id="@+id/top6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/showMoreIV"
-            android:layout_marginHorizontal="45dp"
-            android:layout_marginBottom="12.5dp"
-            android:background="@drawable/leaderboard_bg"
+            <ImageView
+                android:id="@+id/showMoreIV"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/backBtn"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="47dp"
+                android:background="@drawable/showmorelb" />
 
-            >
+            <LinearLayout
+                android:id="@+id/top6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/showMoreIV"
+                android:layout_marginHorizontal="45dp"
+                android:layout_marginBottom="12.5dp"
+                android:background="@drawable/leaderboard_bg"
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/background">
+                >
 
-                <ImageView
-                    android:id="@+id/top6img"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:background="@drawable/person_img" />
-
-                <TextView
-                    android:id="@+id/top6name"
-                    android:layout_width="220dp"
-                    android:layout_height="35dp"
-                    android:layout_toRightOf="@id/top6img"
-                    android:background="@drawable/leaderboard_bg" />
-
-                <ImageView
-                    android:id="@+id/top6streak"
-                    android:layout_width="30dp"
-                    android:layout_height="35dp"
-                    android:layout_toRightOf="@id/top6name"
-                    android:background="@drawable/streak" />
-
-                <TextView
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:layout_toRightOf="@id/top6streak"
-                    android:background="@drawable/leaderboard_bg"
-                    android:fontFamily="@font/poppins_extrabold"
-                    android:gravity="center"
-                    android:text="200"
-                    android:textSize="20dp" />
-            </RelativeLayout>
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background">
 
-        </LinearLayout> <!-- top 6-->
+                    <ImageView
+                        android:id="@+id/top6img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="@drawable/person_img" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/top7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/top6"
-            android:layout_marginHorizontal="45dp"
-            android:layout_marginBottom="12.5dp"
-            android:background="@drawable/leaderboard_bg"
+                    <TextView
+                        android:id="@+id/top6name"
+                        android:layout_width="220dp"
+                        android:layout_height="35dp"
+                        android:layout_toRightOf="@id/top6img"
+                        android:background="@drawable/leaderboard_bg" />
 
-            >
+                    <ImageView
+                        android:id="@+id/top6streak"
+                        android:layout_width="30dp"
+                        android:layout_height="35dp"
+                        android:layout_toRightOf="@id/top6name"
+                        android:background="@drawable/streak" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/background">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_toRightOf="@id/top6streak"
+                        android:background="@drawable/leaderboard_bg"
+                        android:fontFamily="@font/poppins_extrabold"
+                        android:gravity="center"
+                        android:text="200"
+                        android:textSize="20dp" />
+                </RelativeLayout>
 
-                <ImageView
-                    android:id="@+id/top7img"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:background="@drawable/person_img" />
+            </LinearLayout> <!-- top 6-->
 
-                <TextView
-                    android:id="@+id/top7name"
-                    android:layout_width="220dp"
-                    android:layout_height="35dp"
-                    android:layout_toRightOf="@id/top7img"
-                    android:background="@drawable/leaderboard_bg" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/top7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top6"
+                android:layout_marginHorizontal="45dp"
+                android:layout_marginBottom="12.5dp"
+                android:background="@drawable/leaderboard_bg"
 
-                <ImageView
-                    android:id="@+id/top7streak"
-                    android:layout_width="30dp"
-                    android:layout_height="35dp"
-                    android:layout_toRightOf="@id/top7name"
-                    android:background="@drawable/streak" />
+                >
 
-                <TextView
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:layout_toRightOf="@id/top7streak"
-                    android:background="@drawable/leaderboard_bg"
-                    android:fontFamily="@font/poppins_extrabold"
-                    android:gravity="center"
-                    android:text="200"
-                    android:textSize="20dp" />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView> <!-- top 7-->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/top8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/top7"
-            android:layout_marginHorizontal="45dp"
-            android:layout_marginBottom="12.5dp"
-            android:background="@drawable/leaderboard_bg"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background">
 
-            >
+                    <ImageView
+                        android:id="@+id/top7img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="@drawable/person_img" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/background">
+                    <TextView
+                        android:id="@+id/top7name"
+                        android:layout_width="220dp"
+                        android:layout_height="35dp"
+                        android:layout_toRightOf="@id/top7img"
+                        android:background="@drawable/leaderboard_bg" />
 
-                <ImageView
-                    android:id="@+id/top8img"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:background="@drawable/person_img" />
+                    <ImageView
+                        android:id="@+id/top7streak"
+                        android:layout_width="30dp"
+                        android:layout_height="35dp"
+                        android:layout_toRightOf="@id/top7name"
+                        android:background="@drawable/streak" />
 
-                <TextView
-                    android:id="@+id/top8name"
-                    android:layout_width="220dp"
-                    android:layout_height="35dp"
-                    android:layout_toRightOf="@id/top8img"
-                    android:background="@drawable/leaderboard_bg" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_toRightOf="@id/top7streak"
+                        android:background="@drawable/leaderboard_bg"
+                        android:fontFamily="@font/poppins_extrabold"
+                        android:gravity="center"
+                        android:text="200"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView> <!-- top 7-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/top8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top7"
+                android:layout_marginHorizontal="45dp"
+                android:layout_marginBottom="12.5dp"
+                android:background="@drawable/leaderboard_bg"
 
-                <ImageView
-                    android:id="@+id/top8streak"
-                    android:layout_width="30dp"
-                    android:layout_height="35dp"
-                    android:layout_toRightOf="@id/top8name"
-                    android:background="@drawable/streak" />
+                >
 
-                <TextView
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:layout_toRightOf="@id/top8streak"
-                    android:background="@drawable/leaderboard_bg"
-                    android:fontFamily="@font/poppins_extrabold"
-                    android:gravity="center"
-                    android:text="200"
-                    android:textSize="20dp" />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView> <!-- top 8-->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/top9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/top8"
-            android:layout_marginHorizontal="45dp"
-            android:layout_marginBottom="12.5dp"
-            android:background="@drawable/leaderboard_bg"
+                    android:layout_height="match_parent"
+                    android.background="@drawable/background">
 
-            >
+                    <ImageView
+                        android:id="@+id/top8img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="@drawable/person_img" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/background">
+                    <TextView
+                        android:id="@+id/top8name"
+                        android:layout_width="220dp"
+                        android:layout_height="35dp"
+                        android:layout_toRightOf="@id/top8img"
+                        android:background="@drawable/leaderboard_bg" />
 
-                <ImageView
-                    android:id="@+id/top9img"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:background="@drawable/person_img" />
+                    <ImageView
+                        android:id="@+id/top8streak"
+                        android:layout_width="30dp"
+                        android:layout_height="35dp"
+                        android:layout_toRightOf="@id/top8name"
+                        android:background="@drawable/streak" />
 
-                <TextView
-                    android:id="@+id/top9name"
-                    android:layout_width="220dp"
-                    android:layout_height="35dp"
-                    android:layout_toRightOf="@id/top9img"
-                    android:background="@drawable/leaderboard_bg" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_toRightOf="@id/top8streak"
+                        android:background="@drawable/leaderboard_bg"
+                        android:fontFamily="@font/poppins_extrabold"
+                        android:gravity="center"
+                        android:text="200"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView> <!-- top 8-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/top9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top8"
+                android:layout_marginHorizontal="45dp"
+                android:layout_marginBottom="12.5dp"
+                android:background="@drawable/leaderboard_bg"
 
-                <ImageView
-                    android:id="@+id/top9streak"
-                    android:layout_width="30dp"
-                    android:layout_height="35dp"
-                    android:layout_toRightOf="@id/top9name"
-                    android:background="@drawable/streak" />
+                >
 
-                <TextView
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:layout_toRightOf="@id/top9streak"
-                    android:background="@drawable/leaderboard_bg"
-                    android:fontFamily="@font/poppins_extrabold"
-                    android:gravity="center"
-                    android:text="200"
-                    android:textSize="20dp" />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView> <!-- top 9-->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/top10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/top9"
-            android:layout_marginHorizontal="45dp"
-            android:layout_marginBottom="12.5dp"
-            android:background="@drawable/leaderboard_bg"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background">
 
-            >
+                    <ImageView
+                        android:id="@+id/top9img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="@drawable/person_img" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/background">
+                    <TextView
+                        android:id="@+id/top9name"
+                        android:layout_width="220dp"
+                        android:layout_height="35dp"
+                        android:layout_toRightOf="@id/top9img"
+                        android:background="@drawable/leaderboard_bg" />
 
-                <ImageView
-                    android:id="@+id/top10img"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:background="@drawable/person_img" />
+                    <ImageView
+                        android:id="@+id/top9streak"
+                        android:layout_width="30dp"
+                        android:layout_height="35dp"
+                        android:layout_toRightOf="@id/top9name"
+                        android:background="@drawable/streak" />
 
-                <TextView
-                    android:id="@+id/top10name"
-                    android:layout_width="220dp"
-                    android:layout_height="35dp"
-                    android:layout_toRightOf="@id/top10img"
-                    android:background="@drawable/leaderboard_bg" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_toRightOf="@id/top9streak"
+                        android:background="@drawable/leaderboard_bg"
+                        android:fontFamily="@font/poppins_extrabold"
+                        android:gravity="center"
+                        android:text="200"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView> <!-- top 9-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/top10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top9"
+                android:layout_marginHorizontal="45dp"
+                android:layout_marginBottom="12.5dp"
+                android:background="@drawable/leaderboard_bg"
 
-                <ImageView
-                    android:id="@+id/top10streak"
-                    android:layout_width="30dp"
-                    android:layout_height="35dp"
-                    android:layout_toRightOf="@id/top10name"
-                    android:background="@drawable/streak" />
+                >
 
-                <TextView
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:layout_toRightOf="@id/top10streak"
-                    android:background="@drawable/leaderboard_bg"
-                    android:fontFamily="@font/poppins_extrabold"
-                    android:gravity="center"
-                    android:text="200"
-                    android:textSize="20dp" />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView> <!-- top 10-->
-    </RelativeLayout>
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background">
+
+                    <ImageView
+                        android:id="@+id/top10img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="@drawable/person_img" />
+
+                    <TextView
+                        android:id="@+id/top10name"
+                        android:layout_width="220dp"
+                        android:layout_height="35dp"
+                        android:layout_toRightOf="@id/top10img"
+                        android:background="@drawable/leaderboard_bg" />
+
+                    <ImageView
+                        android:id="@+id/top10streak"
+                        android:layout_width="30dp"
+                        android:layout_height="35dp"
+                        android:layout_toRightOf="@id/top10name"
+                        android:background="@drawable/streak" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_toRightOf="@id/top10streak"
+                        android:background="@drawable/leaderboard_bg"
+                        android:fontFamily="@font/poppins_extrabold"
+                        android:gravity="center"
+                        android:text="200"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView> <!-- top 10-->
+        </RelativeLayout>
+    </ScrollView>
 
     <FrameLayout
         android:id="@+id/menutab"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="#D9D9D9"
-        android:layout_gravity="bottom"
-        android:layout_marginTop="446dp"
-        tools:ignore="MissingConstraints">
+        android:layout_alignParentBottom="true">
 
         <ImageView
             android:id="@+id/homebutton"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginLeft="30dp"
             android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/homebutton"
             android:clickable="true"
-            android:focusable="true"
-            android:src="@drawable/homebutton" />
+            android:focusable="true"/>
 
         <ImageView
             android:id="@+id/leaderboardbutton"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginLeft="105dp"
+            android:src="@drawable/trophybutton"
             android:layout_marginTop="5dp"
+            android:layout_marginLeft="105dp"
             android:clickable="true"
-            android:focusable="true"
-            android:src="@drawable/trophybutton" />
+            android:focusable="true"/>
 
         <ImageView
             android:id="@+id/searchbutton"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginLeft="185dp"
+            android:src="@drawable/searchbutton"
             android:layout_marginTop="5dp"
+            android:layout_marginLeft="185dp"
             android:clickable="true"
-            android:focusable="true"
-            android:src="@drawable/searchbutton" />
+            android:focusable="true"/>
 
         <ImageView
             android:id="@+id/taskboardbutton"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginLeft="270dp"
+            android:src="@drawable/taskboardbutton"
             android:layout_marginTop="5dp"
-            android:src="@drawable/taskboardbutton" />
+            android:layout_marginLeft="270dp"/>
 
         <ImageView
             android:id="@+id/profilebutton"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginLeft="345dp"
+            android:src="@drawable/profilebutton"
             android:layout_marginTop="5dp"
+            android:layout_marginLeft="345dp"
             android:clickable="true"
-            android:focusable="true"
-            android:src="@drawable/profilebutton" />
+            android:focusable="true"/>
     </FrameLayout>
     <!--    end of the selection-->
 
 
-</LinearLayout>
+</RelativeLayout>

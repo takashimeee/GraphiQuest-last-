@@ -1,150 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LeaderboardMain"
-    android:orientation="vertical"
     android:background="@drawable/background">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/body"
-        tools:ignore="MissingConstraints">
+        android:layout_height="match_parent"
+        android:layout_above="@id/menutab">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/grapquest"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="50dp"
-            android:id="@+id/logo"
-            /> <!-- graphiquest logo-->
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/arrow_left"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
-            android:id="@+id/backBtn"
-            android:clickable="true"
-            android:focusable="true"
-            /> <!-- back button-->
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:background="@drawable/searchhh"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
-            android:id="@+id/search"
-            android:layout_below="@+id/backBtn"
-            /> <!-- search logo-->
-
-        <TextView
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:fontFamily="@font/poppinsblack"
-            android:textSize="16dp"
-            android:layout_below="@+id/search"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="15dp"
-            android:text="What type of QuestTaker you want to see in the leader board?"
-            android:id="@+id/text"
-            android:textColor="@color/black"
-            /> <!-- text-->
-
-        <Button
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:layout_marginVertical="7dp"
-            android:fontFamily="@font/poppins_extrabold"
-            android:textSize="23dp"
-            android:textColor="@color/black"
-            android:text="   UI DESIGN"
-            android:textAlignment="viewStart"
-            android:layout_marginHorizontal="15dp"
-            android:backgroundTint="@color/white"
-            android:layout_below="@id/text"
-            android:id="@+id/uiDesignBtn"
-            /><!-- ui design button id uiDesignBtn-->
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:layout_marginVertical="7dp"
-            android:fontFamily="@font/poppins_extrabold"
-            android:textSize="23dp"
-            android:textColor="@color/black"
-            android:text="   Web Design"
-            android:textAlignment="viewStart"
-            android:layout_marginHorizontal="15dp"
-            android:backgroundTint="@color/white"
-            android:layout_below="@id/uiDesignBtn"
-            android:id="@+id/webDesignBtn"
-            /><!-- web designer button id webDesignBtn-->
+            android:id="@+id/body">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:layout_marginVertical="7dp"
-            android:fontFamily="@font/poppins_extrabold"
-            android:textSize="23dp"
-            android:textColor="@color/black"
-            android:text="   Advertisement Manager"
-            android:textAlignment="viewStart"
-            android:layout_marginHorizontal="15dp"
-            android:backgroundTint="@color/white"
-            android:layout_below="@id/webDesignBtn"
-            android:id="@+id/adManagerBtn"
-            /><!-- ad manager  button id adManagerBtn-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grapquest"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="50dp"
+                android:id="@+id/logo"
+                /> <!-- graphiquest logo-->
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:layout_marginVertical="7dp"
-            android:fontFamily="@font/poppins_extrabold"
-            android:textSize="23dp"
-            android:textColor="@color/black"
-            android:text="   3D Modeling"
-            android:textAlignment="viewStart"
-            android:layout_marginHorizontal="15dp"
-            android:backgroundTint="@color/white"
-            android:layout_below="@id/adManagerBtn"
-            android:id="@+id/d3ModelingBtn"
-            /><!-- 3d modeling button id d3ModelingBtn-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/arrow_left"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/backBtn"
+                android:clickable="true"
+                android:focusable="true"
+                /> <!-- back button-->
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/searchhh"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:id="@+id/search"
+                android:layout_below="@+id/backBtn"
+                /> <!-- search logo-->
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:layout_marginVertical="7dp"
-            android:fontFamily="@font/poppins_extrabold"
-            android:textSize="23dp"
-            android:textColor="@color/black"
-            android:text="   Art Director"
-            android:textAlignment="viewStart"
-            android:layout_marginHorizontal="15dp"
-            android:backgroundTint="@color/white"
-            android:layout_below="@id/d3ModelingBtn"
-            android:id="@+id/artDirectorBtn"
-            /> <!-- art director button id artDirectorBtn-->
-    </RelativeLayout> <!-- main body-->
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppinsblack"
+                android:textSize="16dp"
+                android:layout_below="@+id/search"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:text="What type of QuestTaker you want to see in the leader board?"
+                android:id="@+id/text"
+                android:textColor="@color/black"
+                /> <!-- text-->
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginVertical="7dp"
+                android:fontFamily="@font/poppins_extrabold"
+                android:textSize="23dp"
+                android:textColor="@color/black"
+                android:text="   UI DESIGN"
+                android:textAlignment="viewStart"
+                android:layout_marginHorizontal="15dp"
+                android:backgroundTint="@color/white"
+                android:layout_below="@id/text"
+                android:id="@+id/uiDesignBtn"
+                /><!-- ui design button id uiDesignBtn-->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginVertical="7dp"
+                android:fontFamily="@font/poppins_extrabold"
+                android:textSize="23dp"
+                android:textColor="@color/black"
+                android:text="   Web Design"
+                android:textAlignment="viewStart"
+                android:layout_marginHorizontal="15dp"
+                android:backgroundTint="@color/white"
+                android:layout_below="@id/uiDesignBtn"
+                android:id="@+id/webDesignBtn"
+                /><!-- web designer button id webDesignBtn-->
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginVertical="7dp"
+                android:fontFamily="@font/poppins_extrabold"
+                android:textSize="23dp"
+                android:textColor="@color/black"
+                android:text="   Advertisement Manager"
+                android:textAlignment="viewStart"
+                android:layout_marginHorizontal="15dp"
+                android:backgroundTint="@color/white"
+                android:layout_below="@id/webDesignBtn"
+                android:id="@+id/adManagerBtn"
+                /><!-- ad manager  button id adManagerBtn-->
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginVertical="7dp"
+                android:fontFamily="@font/poppins_extrabold"
+                android:textSize="23dp"
+                android:textColor="@color/black"
+                android:text="   3D Modeling"
+                android:textAlignment="viewStart"
+                android:layout_marginHorizontal="15dp"
+                android:backgroundTint="@color/white"
+                android:layout_below="@id/adManagerBtn"
+                android:id="@+id/d3ModelingBtn"
+                /><!-- 3d modeling button id d3ModelingBtn-->
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginVertical="7dp"
+                android:fontFamily="@font/poppins_extrabold"
+                android:textSize="23dp"
+                android:textColor="@color/black"
+                android:text="   Art Director"
+                android:textAlignment="viewStart"
+                android:layout_marginHorizontal="15dp"
+                android:backgroundTint="@color/white"
+                android:layout_below="@id/d3ModelingBtn"
+                android:id="@+id/artDirectorBtn"
+                /> <!-- art director button id artDirectorBtn-->
+        </RelativeLayout> <!-- main body-->
+    </ScrollView>
 
     <FrameLayout
         android:id="@+id/menutab"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="#D9D9D9"
-        android:layout_marginTop="178dp"
-        tools:ignore="MissingConstraints">
+        android:layout_alignParentBottom="true">
 
         <ImageView
             android:id="@+id/homebutton"
@@ -196,4 +199,4 @@
     </FrameLayout>
     <!--    end of the selection-->
 
-</LinearLayout>
+</RelativeLayout>

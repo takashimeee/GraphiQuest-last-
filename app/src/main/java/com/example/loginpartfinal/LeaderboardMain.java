@@ -1,4 +1,4 @@
-    package com.example.loginpartfinal;
+package com.example.loginpartfinal;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class LeaderboardMain extends AppCompatActivity implements  View.OnClickListener {
 
 
-    ImageView backBtn, homeBtn, leaderboardBtn, searchBtn, taskBtn, profileBtn;
+    ImageView backBtn, homebutton, leaderboardbutton, searchbutton, taskboardbutton, profilebutton;
     Button uiDesignBtn, webDesignBtn, adManagerBtn, d3ModelingBtn, artDirectorBtn;
 
 
@@ -30,24 +30,25 @@ public class LeaderboardMain extends AppCompatActivity implements  View.OnClickL
             return insets;
         });
 
-        ImageView backBtn = findViewById(R.id.backBtn);
-        Button uiDesignBtn = findViewById(R.id.uiDesignBtn);
-        Button webDesignBtn = findViewById(R.id.webDesignBtn);
-        Button adManagerBtn = findViewById(R.id.adManagerBtn);
-        Button d3ModelingBtn = findViewById(R.id.d3ModelingBtn);
-        Button artDirectorBtn = findViewById(R.id.artDirectorBtn);
-        ImageView homeBtn = findViewById(R.id.homebutton);
-        ImageView leaderboardBtn = findViewById(R.id.leaderboardbutton);
-        ImageView searchBtn = findViewById(R.id.searchbutton);
-        ImageView taskBtn = findViewById(R.id.taskboardbutton);
-        ImageView profileBtn = findViewById(R.id.profilebutton);
+        backBtn = findViewById(R.id.backBtn);
+        uiDesignBtn = findViewById(R.id.uiDesignBtn);
+        webDesignBtn = findViewById(R.id.webDesignBtn);
+        adManagerBtn = findViewById(R.id.adManagerBtn);
+        d3ModelingBtn = findViewById(R.id.d3ModelingBtn);
+        artDirectorBtn = findViewById(R.id.artDirectorBtn);
+        homebutton = findViewById(R.id.homebutton);
+        leaderboardbutton = findViewById(R.id.leaderboardbutton);
+        searchbutton = findViewById(R.id.searchbutton);
+        taskboardbutton = findViewById(R.id.taskboardbutton);
+        profilebutton = findViewById(R.id.profilebutton);
+
 
         backBtn.setOnClickListener(this);
-        homeBtn.setOnClickListener(this);
-        leaderboardBtn.setOnClickListener(this);
-        searchBtn.setOnClickListener(this);
-        taskBtn.setOnClickListener(this);
-        profileBtn.setOnClickListener(this);
+        homebutton.setOnClickListener(this);
+        leaderboardbutton.setOnClickListener(this);
+        searchbutton.setOnClickListener(this);
+        taskboardbutton.setOnClickListener(this);
+        profilebutton.setOnClickListener(this);
 
         uiDesignBtn.setOnClickListener(v->openLeaderboard(LeaderboardConstants.TYPE_UI));
         webDesignBtn.setOnClickListener(v->openLeaderboard(LeaderboardConstants.TYPE_WEB));
@@ -69,31 +70,23 @@ public class LeaderboardMain extends AppCompatActivity implements  View.OnClickL
         int id = v.getId();
 
         if (id == R.id.backBtn) {
-            /* This opens the main page change mainPage.class to the main page of app
-            intent = new Intent(this, mainPage.class);
-            startActivity(intent); */
-        } else if (id == R.id.homebutton){
-              /* Same shit as backBtn
-            intent = new Intent(this, mainPage.class);
-            startActivity(intent);*/
-        } else if (id == R.id.leaderboardbutton){
-            //does nothing youre here already
-        } else if (id == R.id.searchbutton){
-            /* This opens the search page change searchPage.class to search page of the app
-            intent = new intent(this, searchPage.class);
+            intent = new Intent(this, homepage.class);
             startActivity(intent);
-             */
-        } else if (id == R.id.taskboardbutton){
-            /* This opens the task page change taskPage.class to task page of the app
-            intent = new intent(this, taskPage.class);
+        } else if (id == R.id.homebutton) {
+            intent = new Intent(this, homepage.class);
             startActivity(intent);
-             */
-        } else if (id == R.id.profilebutton){
-            /* This opens profile page change profilePage.class to profile page of the app
-            intent = new intent (this, profilePage.class);
+        } else if (id == R.id.leaderboardbutton) {
+            intent = new Intent(this, LeaderboardMain.class);
             startActivity(intent);
-             */
+        } else if (id == R.id.searchbutton) {
+            intent = new Intent(this, takersearchbar1.class);
+            startActivity(intent);
+        } else if (id == R.id.taskboardbutton) {
+            intent = new Intent(this, taskbar1.class);
+            startActivity(intent);
+        } else if (id == R.id.profilebutton) {
+            intent = new Intent(this, userprofile.class);
+            startActivity(intent);
         }
-
     }
 }

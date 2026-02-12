@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class takersearchbar1 extends AppCompatActivity implements View.OnClickListener {
 
-    ImageView homebutton, leaderboardbutton, searchbutton, taskboardbutton, profilebutton, msgbtn;
+    ImageView homebutton, leaderboardbutton, searchbutton, taskboardbutton, profilebutton, msgbtn, btnback;
     Button btnWebDesign, btnPv, btnUIDesign, btnGameDev;
 
     @Override
@@ -18,6 +18,7 @@ public class takersearchbar1 extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_takersearchbar1);
 
+        btnback = findViewById(R.id.btnback);
         homebutton = findViewById(R.id.homebutton);
         leaderboardbutton = findViewById(R.id.leaderboardbutton);
         searchbutton = findViewById(R.id.searchbutton);
@@ -51,20 +52,31 @@ public class takersearchbar1 extends AppCompatActivity implements View.OnClickLi
         if (id == R.id.btnWebDesign || id == R.id.btnPv || id == R.id.btnUIDesign || id == R.id.btnGameDev) {
             intent = new Intent(this, takersearchbar2.class);
             startActivity(intent);
-        } else if (id == R.id.searchbutton) {
-            // Do nothing, already on this screen
-        } else if (id == R.id.homebutton || id == R.id.leaderboardbutton) {
-            intent = new Intent(this, LeaderboardFullList.class);
-            startActivity(intent);
-        } else if (id == R.id.taskboardbutton) {
-            intent = new Intent(this, pendingtask.class);
-            startActivity(intent);
-        } else if (id == R.id.profilebutton) {
-            intent = new Intent(this, userprofile.class);
-            startActivity(intent);
-        } else if (id == R.id.msgbtn) {
-            intent = new Intent(this, messagetab.class);
-            startActivity(intent);
+
+            if (id == R.id.btnback) {
+                intent = new Intent(this, homepagetaker.class);
+                startActivity(intent);
+
+
+            } else if (id == R.id.searchbutton) {
+                intent = new Intent(this, takersearchbar1.class);
+                startActivity(intent);
+            } else if (id == R.id.homebutton) {
+                intent = new Intent(this, homepagetaker.class);
+                startActivity(intent);
+            } else if (id == R.id.leaderboardbutton) {
+                intent = new Intent(this, LeaderboardMain.class);
+                startActivity(intent);
+            } else if (id == R.id.taskboardbutton) {
+                intent = new Intent(this, pendingtask.class);
+                startActivity(intent);
+            } else if (id == R.id.profilebutton) {
+                intent = new Intent(this, userprofile.class);
+                startActivity(intent);
+            } else if (id == R.id.msgbtn) {
+                intent = new Intent(this, messagetab.class);
+                startActivity(intent);
+            }
         }
     }
 }

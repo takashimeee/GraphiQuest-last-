@@ -1,241 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/white"
     tools:context=".homepagegiver">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to GraphiQuest!"
-        android:fontFamily="@font/poppinsblack"
-        android:textColor="@color/black"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
-        android:textSize="20dp"
-        android:textStyle="bold"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/menutab">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppinsblack"
-        android:textColor="@color/black"
-        android:text="QuestTaker Of The Day!"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="90dp"/>
-
-    <FrameLayout
-        android:layout_width="324dp"
-        android:layout_height="213dp"
-        android:id="@+id/giverframe1"
-        android:background="@drawable/curve3hpg"
-        android:layout_gravity="center_horizontal">
-
-        <FrameLayout
-            android:layout_width="288dp"
-            android:layout_height="170dp"
-            android:id="@+id/giverframe2"
-            android:background="@drawable/curve4hpg"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Gusion Manlaban Johnson III"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:fontFamily="@font/poppinsblack"
-            android:layout_gravity="center"/>
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to GraphiQuest!"
+                android:fontFamily="@font/poppinsblack"
+                android:textColor="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsblack"
+                android:textColor="@color/black"
+                android:text="QuestTaker Of The Day!"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="90dp"/>
+
+            <FrameLayout
+                android:layout_width="324dp"
+                android:layout_height="213dp"
+                android:id="@+id/giverframe1"
+                android:background="@drawable/curve3hpg"
+                android:layout_gravity="center_horizontal">
+
+                <FrameLayout
+                    android:layout_width="288dp"
+                    android:layout_height="170dp"
+                    android:id="@+id/giverframe2"
+                    android:background="@drawable/curve4hpg"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gusion Manlaban Johnson III"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsblack"
+                    android:layout_gravity="center"/>
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Current Rank: Diamond"
-            android:fontFamily="@font/poppinslight"
-            android:layout_gravity="center"
-            android:textColor="@color/black"
-           android:layout_marginTop="20dp"
-            android:textStyle="bold"
-            android:textSize="11dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Rank: Diamond"
+                    android:fontFamily="@font/poppinslight"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                   android:layout_marginTop="20dp"
+                    android:textStyle="bold"
+                    android:textSize="11dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Quest taken: 80"
-            android:fontFamily="@font/poppinslight"
-            android:layout_gravity="center"
-            android:textColor="@color/black"
-            android:layout_marginTop="40dp"
-            android:textStyle="bold"
-            android:textSize="11dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quest taken: 80"
+                    android:fontFamily="@font/poppinslight"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="40dp"
+                    android:textStyle="bold"
+                    android:textSize="11dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="LeaderBoard Rank: 13"
-            android:fontFamily="@font/poppinslight"
-            android:layout_gravity="center"
-            android:textColor="@color/black"
-            android:layout_marginTop="60dp"
-            android:textStyle="bold"
-            android:textSize="11dp" />
-
-
-        <ImageView
-            android:layout_width="74dp"
-            android:layout_height="58dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="35dp"
-            android:src="@drawable/profilemsgtab" />
-    </FrameLayout>
-
-<!--    QuestTaker of the day line-->
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Other Quest that might fit for you quest taker!"
-        android:fontFamily="@font/poppinsblack"
-        android:textColor="@color/black"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:textStyle="bold"/>
-
-    <FrameLayout
-        android:layout_width="324dp"
-        android:layout_height="213dp"
-        android:id="@+id/giverframe3"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/curve3hpg"
-        android:layout_gravity="center_horizontal">
-
-        <FrameLayout
-            android:layout_width="288dp"
-            android:layout_height="170dp"
-            android:id="@+id/giverframe4"
-            android:background="@drawable/curve4hpg"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gusion Manlaban Johnson III"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:fontFamily="@font/poppinsblack"
-            android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LeaderBoard Rank: 13"
+                    android:fontFamily="@font/poppinslight"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="60dp"
+                    android:textStyle="bold"
+                    android:textSize="11dp" />
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Current Rank: Platinum"
-            android:fontFamily="@font/poppinslight"
-            android:layout_gravity="center"
-            android:textColor="@color/black"
-            android:layout_marginTop="20dp"
-            android:textStyle="bold"
-            android:textSize="11dp"/>
+                <ImageView
+                    android:layout_width="74dp"
+                    android:layout_height="58dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="35dp"
+                    android:src="@drawable/profilemsgtab" />
+            </FrameLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Quest taken: 21"
-            android:fontFamily="@font/poppinslight"
-            android:layout_gravity="center"
-            android:textColor="@color/black"
-            android:layout_marginTop="40dp"
-            android:textStyle="bold"
-            android:textSize="11dp" />
+        <!--    QuestTaker of the day line-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="LeaderBoard Rank: 20"
-            android:fontFamily="@font/poppinslight"
-            android:layout_gravity="center"
-            android:textColor="@color/black"
-            android:layout_marginTop="60dp"
-            android:textStyle="bold"
-            android:textSize="11dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other Quest that might fit for you quest taker!"
+                android:fontFamily="@font/poppinsblack"
+                android:textColor="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"/>
 
+            <FrameLayout
+                android:layout_width="324dp"
+                android:layout_height="213dp"
+                android:id="@+id/giverframe3"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/curve3hpg"
+                android:layout_gravity="center_horizontal">
 
-        <ImageView
-            android:layout_width="74dp"
-            android:layout_height="58dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="35dp"
-            android:src="@drawable/profilemsgtab" />
-    </FrameLayout>
+                <FrameLayout
+                    android:layout_width="288dp"
+                    android:layout_height="170dp"
+                    android:id="@+id/giverframe4"
+                    android:background="@drawable/curve4hpg"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"/>
 
-    <FrameLayout
-        android:id="@+id/msgnpostbtn"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="300dp"
-        android:background="@drawable/msgnpostbtn">
-
-        <FrameLayout
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/messagetab"
-            android:id="@+id/Postquest"
-            android:layout_gravity="center"
-            android:layout_marginRight="25dp">
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/taskbutton"
-                android:id="@+id/postbtn"
-                android:layout_gravity="center"
-                android:clickable="true"
-                android:focusable="true"/>
-        </FrameLayout>
-<!--        end of post button-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gusion Manlaban Johnson III"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsblack"
+                    android:layout_gravity="center"/>
 
 
-        <FrameLayout
-            android:id="@+id/messagebtn1"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="25dp"
-            android:background="@drawable/messagetab"
-            android:clickable="true"
-            android:focusable="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Rank: Platinum"
+                    android:fontFamily="@font/poppinslight"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold"
+                    android:textSize="11dp"/>
 
-            <ImageView
-                android:id="@+id/msgbtn"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/chattab"
-                android:layout_gravity="center"
-                android:clickable="true"
-                android:focusable="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quest taken: 21"
+                    android:fontFamily="@font/poppinslight"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="40dp"
+                    android:textStyle="bold"
+                    android:textSize="11dp" />
 
-        </FrameLayout>
-<!--        end of message button-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LeaderBoard Rank: 20"
+                    android:fontFamily="@font/poppinslight"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="60dp"
+                    android:textStyle="bold"
+                    android:textSize="11dp" />
 
-    </FrameLayout>
+
+                <ImageView
+                    android:layout_width="74dp"
+                    android:layout_height="58dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="35dp"
+                    android:src="@drawable/profilemsgtab" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/msgnpostbtn"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="300dp"
+                android:background="@drawable/msgnpostbtn">
+
+                <FrameLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/messagetab"
+                    android:id="@+id/Postquest"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="25dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/taskbutton"
+                        android:id="@+id/postbtn"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"/>
+                </FrameLayout>
+        <!--        end of post button-->
+
+
+                <FrameLayout
+                    android:id="@+id/messagebtn1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/messagetab"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/msgbtn"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/chattab"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"/>
+
+                </FrameLayout>
+        <!--        end of message button-->
+
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
 
     <FrameLayout
         android:id="@+id/menutab"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="#D9D9D9"
-        android:layout_marginTop="47dp">
+        android:layout_alignParentBottom="true">
 
         <ImageView
             android:id="@+id/homebutton"
@@ -288,27 +299,4 @@
             android:focusable="true"/>
     </FrameLayout>
     <!--    end of the selection-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</LinearLayout>
+</RelativeLayout>

@@ -1,199 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LeaderboardPodiumActivity"
-    android:orientation="vertical"
     android:background="@drawable/background">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/logoImage"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="50dp"
-            android:contentDescription="GraphiQuest logo"
-            android:src="@drawable/graphq" />
+        android:layout_height="match_parent"
+        android:layout_above="@id/menutab">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/logoImage"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="50dp"
+                android:contentDescription="GraphiQuest logo"
+                android:src="@drawable/graphq" />
             /> <!-- graphiquest logo-->
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/arrow_left"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
-            android:id="@+id/backBtn"
-            /> <!-- back button-->
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/backBtn"
-            android:id="@+id/leaderboard"
-            android:layout_marginTop="150dp"
-            android:orientation="horizontal"
-            android:gravity="center"
-            >
             <ImageView
-                android:id="@+id/top2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/backBtn"
-                android:background="@drawable/top2"
-                android:layout_gravity="bottom"
-                />
+                android:background="@drawable/arrow_left"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/backBtn"
+                /> <!-- back button-->
 
-            <ImageView
-                android:id="@+id/top1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/backBtn"
-                android:background="@drawable/top1"
-                />
-
-            <ImageView
-                android:id="@+id/top3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/backBtn"
-                android:background="@drawable/top3"
-                android:layout_gravity="bottom"
-                />
-
-        </LinearLayout>
-        <TextView
-            android:id="@+id/leaderboardText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/leaderboard"
-            android:layout_marginTop="-1dp"
-            android:layout_marginBottom="15dp"
-            android:fontFamily="@font/poppinsblack"
-            android:text="Leaderboard"
-            android:textSize="30dp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            />
-
-        <ImageView
-            android:id="@+id/showMoreIV"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_below="@id/leaderboardText"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="47dp"
-            android:background="@drawable/showmorelb" />
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/showMoreIV"
-            android:id="@+id/top4"
-            android:background="@drawable/leaderboard_bg"
-            android:layout_marginHorizontal="45dp"
-            android:layout_marginBottom="12.5dp"
-
-            >
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/background"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/backBtn"
+                android:id="@+id/leaderboard"
+                android:layout_marginTop="150dp"
+                android:orientation="horizontal"
+                android:gravity="center"
                 >
                 <ImageView
+                    android:id="@+id/top2"
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:background="@drawable/person_img"
-                    android:id="@+id/top4img"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/backBtn"
+                    android:background="@drawable/top2"
+                    android:layout_gravity="bottom"
                     />
-                <TextView
-                    android:layout_width="220dp"
-                    android:layout_height="35dp"
-                    android:id="@+id/top4name"
-                    android:layout_toRightOf="@id/top4img"
-                    android:background="@drawable/leaderboard_bg"
-                    />
+
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="35dp"
-                    android:background="@drawable/streak"
-                    android:layout_toRightOf="@id/top4name"
-                    android:id="@+id/top4streak"
+                    android:id="@+id/top1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/backBtn"
+                    android:background="@drawable/top1"
                     />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:background="@drawable/leaderboard_bg"
-                    android:layout_toRightOf="@id/top4streak"
-                    android:fontFamily="@font/poppins_extrabold"
-                    android:text="200"
-                    android:gravity="center"
-                    android:textSize="20dp"
+
+                <ImageView
+                    android:id="@+id/top3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/backBtn"
+                    android:background="@drawable/top3"
+                    android:layout_gravity="bottom"
                     />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView> <!-- top 4-->
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/top4"
-            android:id="@+id/top5"
-            android:background="@drawable/leaderboard_bg"
-            android:layout_marginHorizontal="45dp"
-            android:layout_marginTop="12.5dp"
-
-            >
-            <RelativeLayout
+            </LinearLayout>
+            <TextView
+                android:id="@+id/leaderboardText"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/leaderboard"
+                android:layout_marginTop="-1dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/poppinsblack"
+                android:text="Leaderboard"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+
+            <ImageView
+                android:id="@+id/showMoreIV"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/leaderboardText"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="47dp"
+                android:background="@drawable/showmorelb" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/showMoreIV"
+                android:id="@+id/top4"
+                android:background="@drawable/leaderboard_bg"
+                android:layout_marginHorizontal="45dp"
+                android:layout_marginBottom="12.5dp"
+
                 >
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:background="@drawable/person_img"
-                    android:id="@+id/top5img"
-                    />
-                <TextView
-                    android:layout_width="220dp"
-                    android:layout_height="35dp"
-                    android:id="@+id/top5name"
-                    android:layout_toRightOf="@id/top5img"
-                    android:background="@drawable/leaderboard_bg"
-                    />
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="35dp"
-                    android:background="@drawable/streak"
-                    android:layout_toRightOf="@id/top5name"
-                    android:id="@+id/top5streak"
-                    />
-                <TextView
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:background="@drawable/leaderboard_bg"
-                    android:layout_toRightOf="@id/top5streak"
-                    android:fontFamily="@font/poppins_extrabold"
-                    android:text="200"
-                    android:gravity="center"
-                    android:textSize="20dp"
-                    />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView> <!-- top 5-->
-    </RelativeLayout>
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="@drawable/person_img"
+                        android:id="@+id/top4img"
+                        />
+                    <TextView
+                        android:layout_width="220dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/top4name"
+                        android:layout_toRightOf="@id/top4img"
+                        android:background="@drawable/leaderboard_bg"
+                        />
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/streak"
+                        android:layout_toRightOf="@id/top4name"
+                        android:id="@+id/top4streak"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@drawable/leaderboard_bg"
+                        android:layout_toRightOf="@id/top4streak"
+                        android:fontFamily="@font/poppins_extrabold"
+                        android:text="200"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView> <!-- top 4-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top4"
+                android:id="@+id/top5"
+                android:background="@drawable/leaderboard_bg"
+                android:layout_marginHorizontal="45dp"
+                android:layout_marginTop="12.5dp"
+
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="@drawable/person_img"
+                        android:id="@+id/top5img"
+                        />
+                    <TextView
+                        android:layout_width="220dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/top5name"
+                        android:layout_toRightOf="@id/top5img"
+                        android:background="@drawable/leaderboard_bg"
+                        />
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/streak"
+                        android:layout_toRightOf="@id/top5name"
+                        android:id="@+id/top5streak"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@drawable/leaderboard_bg"
+                        android:layout_toRightOf="@id/top5streak"
+                        android:fontFamily="@font/poppins_extrabold"
+                        android:text="200"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView> <!-- top 5-->
+        </RelativeLayout>
+    </ScrollView>
 
     <FrameLayout
         android:id="@+id/menutab"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="#D9D9D9"
-    android:layout_marginTop="235dp"
-        tools:ignore="MissingConstraints">
+        android:layout_alignParentBottom="true">
 
         <ImageView
             android:id="@+id/homebutton"
@@ -245,4 +249,4 @@
     </FrameLayout>
     <!--    end of the selection-->
 
-</LinearLayout>
+</RelativeLayout>
